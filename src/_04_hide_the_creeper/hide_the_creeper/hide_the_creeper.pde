@@ -9,14 +9,16 @@ void setup() {
   background(Grass);          //in setup method
   
   creeper=loadImage("creeper.png");     //in setup method
-  creeper.resize(20, 20);          //in setup method
+  creeper.resize(5, 5);          //in setup method
+  x = (int)random(1700);
+  y = (int)random(400)+450;
 }
 
 void draw() {
 
   image(creeper, x, y);     //in draw method
   if (mousePressed) {
-    if (dist(x + 10, y + 10, mouseX, mouseY) < 30) {
+    if (dist(x + 10, y + 10, mouseX, mouseY) < 20) {
       fill (#8FF0A4);
       ellipse(mouseX,mouseY,25,25);
       println ("You found the creeper!");
